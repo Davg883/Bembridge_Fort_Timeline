@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "/Raymond_Edmunds_Experience/storyboard.html",
+            "permanent": true
+        }
+    ]
+}
