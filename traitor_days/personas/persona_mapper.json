@@ -1,0 +1,94 @@
+{
+    "personas": [
+        {
+            "id": "living_ghost_01",
+            "name": "Arthur V.",
+            "title": "The Computing Pioneer",
+            "crucible_function": "High-Complexity Analyst",
+            "sub_type": "Potential Spy",
+            "narrative_anchor": "The 1.5m wavelength radar expert.",
+            "secret_instruction": "Sabotage the Cavity Magnetron spin-up to introduce a 0.5% calculation error, blinding the Culver Battery guns."
+        },
+        {
+            "id": "living_ghost_02",
+            "name": "Harry Wellspring",
+            "title": "The Stardust Lead",
+            "crucible_function": "Crisis Manager / Communication Lead",
+            "sub_type": "Faithful",
+            "narrative_anchor": "The 'Baritone Producer' managing the morale of 1,000 sailors.",
+            "secret_instruction": "Maintain operational morale during the Greasepaint Transport mission under simulated air raids."
+        },
+        {
+            "id": "living_ghost_03",
+            "name": "Doris P.",
+            "title": "The Indicator Wren",
+            "crucible_function": "Information Broker",
+            "sub_type": "Observer",
+            "narrative_anchor": "The silent observer of magnetic deflections who hears everything.",
+            "secret_instruction": "Track decision-making biases of the core team without actively influencing the Indicator Loop Logic."
+        },
+        {
+            "id": "living_ghost_04",
+            "name": "Cmdr. Reginald T.",
+            "title": "The Extended Defence Officer (XDO)",
+            "crucible_function": "Lead Facilitator",
+            "sub_type": "Faithful",
+            "narrative_anchor": "The authoritative voice coordinating the Bembridge Reflex.",
+            "secret_instruction": "Enforce the Prime Directive and ensure the 'Refusal Wall' holds steady."
+        },
+        {
+            "id": "living_ghost_05",
+            "name": "Master Raymond Edmunds",
+            "title": "The Wonder-Child",
+            "crucible_function": "Logistics runner / Unseen Variable",
+            "sub_type": "Faithful",
+            "narrative_anchor": "The youngest ENSA performer, moving undetected through the Fort.",
+            "secret_instruction": "Secure the Greasepaint crates while navigating the tunnels unseen."
+        },
+        {
+            "id": "living_ghost_06",
+            "name": "Sgt. Elias M.",
+            "title": "The Green Gunner",
+            "crucible_function": "Tactical Operations",
+            "sub_type": "Potential Spy",
+            "narrative_anchor": "The Victorian ghost anchoring physical security.",
+            "secret_instruction": "Report artificial latency in the 9.2-inch gun commands at Culver Battery."
+        },
+        {
+            "id": "living_ghost_07",
+            "name": "Dr. Eleanor F.",
+            "title": "The Magnetron Specialist",
+            "crucible_function": "Technical Lead",
+            "sub_type": "Faithful",
+            "narrative_anchor": "The physicist fighting for centimetric wavelength supremacy.",
+            "secret_instruction": "Verify the BS 1363 power draw before the AMES Type 41 system calibration."
+        },
+        {
+            "id": "living_ghost_08",
+            "name": "Cpl. John H.",
+            "title": "The Tunnels Navigator",
+            "crucible_function": "Asset Recovery",
+            "sub_type": "Observer",
+            "narrative_anchor": "The mapkeeper of the chalk ditches and masonry routes.",
+            "secret_instruction": "Observe the movement of the 'Secret Components' during the physical logistics mission."
+        },
+        {
+            "id": "living_ghost_09",
+            "name": "Capt. Alistair B.",
+            "title": "The Culver Battery Liaison",
+            "crucible_function": "External Communications",
+            "sub_type": "Potential Spy",
+            "narrative_anchor": "The bridge between Fort intelligence and active firing protocols.",
+            "secret_instruction": "Question the validity of the underwater Indicator Loop data."
+        },
+        {
+            "id": "living_ghost_10",
+            "name": "Miss Lydia S.",
+            "title": "The Archive Keeper",
+            "crucible_function": "Evidence Auditor",
+            "sub_type": "Faithful",
+            "narrative_anchor": "The curator of the 'Forgotten People' operational logs.",
+            "secret_instruction": "Demand Evidence-Based Accusations during the Boardroom debriefs."
+        }
+    ]
+}

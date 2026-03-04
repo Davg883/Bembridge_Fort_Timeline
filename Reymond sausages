@@ -1,0 +1,102 @@
+{
+    "project_title": "Greasepaint and Sausages",
+    "subject_profile": {
+        "name": "Raymond Edmunds",
+        "moniker": "The Wonderboy Child Singer",
+        "age_at_outbreak": 10,
+        "unique_status": "Youngest ENSA performer of WWII",
+        "identity_lock_id": "Subject_Alpha_1941",
+        "traits": [
+            "Wears greasepaint to school",
+            "Sleeps in headmaster's study in the afternoon",
+            "Cheerfully jumps into army trucks and ambulances",
+            "Pocketing sausages for father's breakfast"
+        ]
+    },
+    "the_stardust_company_ryde": {
+        "vibe": "Amateur misfits and eccentrics",
+        "members": [
+            {
+                "name": "Mr. Wellspring",
+                "description": "Slightly flat Baritone; Producer"
+            },
+            {
+                "name": "Doris Payton",
+                "description": "Slightly squeaky Contralto"
+            },
+            {
+                "name": "George Linington",
+                "description": "Not very funny comedian and compere"
+            },
+            {
+                "name": "Mr. Bones",
+                "description": "Plays the bones literally"
+            },
+            {
+                "name": "Jose Wellspring",
+                "description": "The Island’s worst impressionist"
+            }
+        ],
+        "famous_cameos": [
+            "Petula Clark",
+            "Bruce Forsyth",
+            "Vera Lynn"
+        ]
+    },
+    "geography_of_secrecy": {
+        "primary_base": "Ryde, Isle of Wight",
+        "fortress_anchors": [
+            "Bembridge Fort (Radar, Loop, and Sonar systems)",
+            "Reactivated Victorian Forts",
+            "Secret Gun Emplacements",
+            "Converted Holiday Camps (packed with 1,000 sailors)"
+        ],
+        "front_line_visuals": [
+            "Radar towers",
+            "Searchlights",
+            "Anti-aircraft batteries"
+        ]
+    },
+    "sensory_and_artifact_keys": {
+        "tactile": [
+            "Makeshift stages (carpet-covered packing cases)",
+            "Canvas tents lit by searchlights",
+            "Sausage fluff (washed off by mother)",
+            "Drafting office tools (shipyard career)"
+        ],
+        "auditory": [
+            "Gunfire and shrapnel rain",
+            "Multiple encores of 'The Good Ship Lollipop'",
+            "The challenge: 'HALT! Who goes there?'"
+        ],
+        "scent": [
+            "Greasepaint",
+            "Army truck exhaust",
+            "Fried sausages in the officer's mess"
+        ]
+    },
+    "narrative_arc": {
+        "climax_conflict": "West End debut thwarted by theatre bombing",
+        "post_war_shift": "Left the stage for a drawing office in a shipyard; story kept secret for 60 years",
+        "full_circle": "2018 return to the abandoned Bembridge Fort after 55 years"
+    },
+    "visual_artifact_prompts": {
+        "the_greasepaint_boy": {
+            "prompt": "A high-fidelity portrait of Subject_Alpha_1941 (Raymond) sitting at a school desk. He still wears thick stage greasepaint on his face while other children stare. A faint shadow of a searchlight beam crosses the window. Style: 1940s film grain. Secret Tokens: [GRAIN_CHECK_1950], [INK_JITTER_1880]."
+        },
+        "the_makeshift_stage": {
+            "prompt": "Subject_Alpha_1941 singing on a stage made of wooden packing cases covered in worn carpet. Lighting is provided by two military searchlights. 1,000 sailors in white uniforms are visible in the darkness. Location: Converted Isle of Wight holiday camp, 1940. Secret Tokens: [NOIR_CHIA_1930], [MACRO_FIDELITY_4K]."
+        },
+        "the_letter": {
+            "prompt": "A close-up of a 1945 letter of congratulation with a visible signature from Clementine Churchill. The paper is aged, with slight tea stains. Text rendering: 'To Master Ray Edmunds'. Secret Tokens: [WAX_DEPTH_2026], [INK_JITTER_1880]."
+        }
+    },
+    "linguistic_constraints": {
+        "dialogue_anchor": "Concert Party! Advance and be recognised!",
+        "terminology": {
+            "hospitality": "Officer's Mess",
+            "theatre_makeup": "Greasepaint",
+            "home": "Blighty"
+        }
+    }
+}

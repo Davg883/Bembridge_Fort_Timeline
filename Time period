@@ -1,0 +1,46 @@
+[
+    {
+        "name": "apply_historical_linguistic_filter",
+        "description": "Applies era-specific linguistic constraints to dialogue. Use 'Victorian' for formal 1800s speech or 'Blitz' for 1940s communal/military slang.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "era": {
+                    "type": "string",
+                    "enum": [
+                        "VICTORIAN",
+                        "BLITZ"
+                    ]
+                },
+                "social_class": {
+                    "type": "string",
+                    "enum": [
+                        "HIGH_BRED",
+                        "WORKING_CLASS"
+                    ]
+                }
+            },
+            "required": [
+                "era",
+                "social_class"
+            ]
+        }
+    },
+    {
+        "name": "lock_subject_identity_protocol",
+        "description": "Uses the Nano Banana 2 'Subject Alpha' logic to maintain facial and prop consistency across multi-frame storyboards.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "subject_name": {
+                    "type": "string",
+                    "default": "Subject Alpha"
+                },
+                "aging_effect": {
+                    "type": "boolean",
+                    "description": "Adjusts facial features for chronological progression (e.g., 1914 to 1945)."
+                }
+            }
+        }
+    }
+]

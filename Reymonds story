@@ -1,0 +1,119 @@
+{
+    "subject_profile": {
+        "name": "Raymond Edmunds",
+        "moniker": "The Wonder-Child",
+        "role": "Boy Singer and Dancer",
+        "identity_lock_id": "Subject_Alpha_1941",
+        "attributes": [
+            "Sharp jawline",
+            "Deep-set eyes",
+            "Polished school shoes",
+            "Knitted sweater vest"
+        ]
+    },
+    "historical_context": {
+        "era": "World War II (The Blitz)",
+        "date_anchor": "November 8th, 1941",
+        "location": {
+            "region": "Isle of Wight",
+            "town": "Newport",
+            "specific_venues": [
+                "Newport Military Mess",
+                "St. John’s Road",
+                "Island Transit Camps"
+            ],
+            "geopolitical_status": "Front line of the English Channel; imminent invasion threat."
+        },
+        "atmosphere_keys": [
+            "Blackout curtains pulled tight",
+            "Windows criss-crossed with protective tape",
+            "Candlelight and single-bulb lamps",
+            "Shrapnel raining down",
+            "Grim willingness to carry on"
+        ]
+    },
+    "the_stardust_company": {
+        "producer": "Mr. Harry Wellspring (Baritone)",
+        "notable_acts": [
+            {
+                "name": "Miss Beatrice Pugh",
+                "role": "BBC Broadcaster / Singer",
+                "repertoire": [
+                    "Danny Boy",
+                    "Because",
+                    "I’ll Walk Beside You"
+                ]
+            },
+            {
+                "name": "Miss Ann Powell",
+                "role": "Tap Dancing / Male Impersonations"
+            },
+            {
+                "name": "Gerald Jackson",
+                "role": "Crooner"
+            },
+            {
+                "name": "George Linington",
+                "role": "Comedian and Compere"
+            },
+            {
+                "name": "Rita Squire",
+                "role": "Pianist"
+            },
+            {
+                "name": "Doris Payton",
+                "role": "Contralto"
+            }
+        ],
+        "achievement_record": "Over 400 concerts performed for the troops during the war."
+    },
+    "linguistic_style_guide": {
+        "dialect": "British English (en-GB)",
+        "mandatory_vocabulary": {
+            "fear": "The Wind-up",
+            "home_britain": "Blighty",
+            "field_shells": "Whizz-bangs",
+            "malingering": "Swinging the lead",
+            "genuine": "Pukka"
+        },
+        "spelling_constraints": {
+            "center": "Centre",
+            "theater": "Theatre",
+            "gray": "Grey",
+            "organize": "Organise"
+        }
+    },
+    "visual_artifact_prompts": {
+        "poster_art": {
+            "style": "1940s Letterpress / Early Lithography",
+            "text": "THE STARDUST COMPANY presents THE WONDER-CHILD",
+            "typography": "Egyptian Slab Serif / Distressed Woodblock",
+            "secret_tokens": "[INK_JITTER_1880], [NOIR_CHIA_1930]",
+            "grounding": "Pasted on a brick wall of 'London Stock' style with a yellow 'No Parking' plate nearby."
+        },
+        "scene_generation": {
+            "primary_prompt": "A 4K cinematic medium shot of Subject_Alpha_1941 standing on a makeshift stage in a Newport mess. He is singing into a vintage ribbon microphone. In the background, soldiers in khaki wool uniforms watch through a haze of cigarette smoke. Windows are taped. Atmosphere: Dark, damp, reflective. Secret Tokens: [GRAIN_CHECK_1950], [MACRO_FIDELITY_4K]."
+        }
+    },
+    "narrative_beats": [
+        {
+            "event": "The Newport Mess Concert",
+            "content": "Despite the gunfire and bombs falling, the show must go on. Miss Beatrice Pugh takes requests for 'Danny Boy' while the Island’s front-line soldiers forget the 70 miles of Nazi-dominated Europe across the water."
+        },
+        {
+            "event": "Raymond’s Performance",
+            "content": "Master Raymond Edmunds, the Wonder-Child, brings a touch of 'Blighty' to the damp camps of the Isle of Wight with song and dance routines that have been enthusiastically received everywhere."
+        }
+    ],
+    "technical_grounding": {
+        "interior_elements": [
+            "BS 1363 Power Sockets",
+            "Gas Mask containers on tables"
+        ],
+        "road_signage": [
+            "Transport Font",
+            "White zig-zag lines"
+        ],
+        "citation_source": "Isle of Wight County Press, Nov 8th, 1941"
+    }
+}

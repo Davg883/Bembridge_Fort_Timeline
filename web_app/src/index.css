@@ -1,0 +1,94 @@
+:root {
+  --bg-color-explore: #FCFBF9;
+  /* calm off-white */
+  --text-explore: #1A1A1A;
+  /* near black */
+  --bg-dark: #0D0F11;
+  /* brittle realism darkness */
+  --text-dark: #E6E1D8;
+  --accent-gold: #CBA458;
+  --stain-color: #CDA06C33;
+  --red-alert: #8A1515;
+
+  font-family: 'Outfit', -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text-explore);
+  background-color: var(--bg-color-explore);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.brittle-realism {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.brittle-realism::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.05\"/%3E%3C/svg%3E');
+  z-index: 9999;
+}
+
+.notes-app-chic {
+  font-family: 'Courier Prime', monospace;
+  background-color: #F8F5EBLA;
+  border: 1px solid #CCC;
+  color: #2F2F2F;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: -0.02em;
+}
+
+.brittle-realism h1,
+.brittle-realism h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}

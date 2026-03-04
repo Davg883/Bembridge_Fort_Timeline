@@ -1,0 +1,99 @@
+[
+    {
+        "name": "localise_image_text_constraints",
+        "description": "Wraps text for Nano Banana Pro in a 'Double-Anchor' structure to force British orthography (-re, -our, -ise). Use this when the image must contain specific UK spellings.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "text_content": {
+                    "type": "string",
+                    "description": "The full text to appear in the image."
+                },
+                "target_word": {
+                    "type": "string",
+                    "description": "The word prone to Americanization (e.g., 'Center')."
+                },
+                "uk_spelling": {
+                    "type": "string",
+                    "description": "The explicit character sequence (e.g., 'C-E-N-T-R-E')."
+                }
+            },
+            "required": [
+                "text_content",
+                "target_word",
+                "uk_spelling"
+            ]
+        }
+    },
+    {
+        "name": "apply_british_visual_anchors",
+        "description": "Injects 'Cultural Shibboleths' (Transport font, BS 1363 plugs) into prompts to force the model away from US-centric visual data.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "scene_type": {
+                    "type": "string",
+                    "enum": [
+                        "STREET",
+                        "OFFICE",
+                        "DOMESTIC",
+                        "INDUSTRIAL"
+                    ]
+                },
+                "typography": {
+                    "type": "string",
+                    "enum": [
+                        "TRANSPORT",
+                        "JOHNSTON",
+                        "GILL_SANS"
+                    ]
+                }
+            },
+            "required": [
+                "scene_type",
+                "typography"
+            ]
+        }
+    },
+    {
+        "name": "sanitize_audio_accent_drift",
+        "description": "Removes American-coded buzzwords from Veo 3.1 scripts to prevent US accent drift. Replaces 'Empowerment/Hustle' with 'Duty/Resilience'.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "original_script": {
+                    "type": "string",
+                    "description": "The dialogue to be spoken in the video."
+                },
+                "tone": {
+                    "type": "string",
+                    "enum": [
+                        "REFLECTIVE",
+                        "AUTHORITATIVE",
+                        "SOMBER"
+                    ]
+                }
+            },
+            "required": [
+                "original_script",
+                "tone"
+            ]
+        }
+    },
+    {
+        "name": "generate_phonetic_eye_dialect",
+        "description": "Converts British place names or terms into phonetic 'Eye Dialect' for Veo 3.1 to ensure correct pronunciation (e.g., Worcester -> Wooster).",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "term": {
+                    "type": "string",
+                    "description": "The British location or word to be respelled phonetically."
+                }
+            },
+            "required": [
+                "term"
+            ]
+        }
+    }
+]

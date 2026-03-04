@@ -1,0 +1,55 @@
+[
+    {
+        "name": "generate_era_accurate_label",
+        "description": "Constructs a high-fidelity prompt for a poster or label. Automatically injects the correct typography, printing technique, and secret tokens based on the selected era.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "era": {
+                    "type": "string",
+                    "enum": [
+                        "VICTORIAN",
+                        "ART_NOUVEAU",
+                        "ART_DECO",
+                        "SWISS_STYLE",
+                        "POST_MODERN",
+                        "2026_PARADIGM"
+                    ]
+                },
+                "text_content": {
+                    "type": "string",
+                    "description": "The text that must appear on the artifact."
+                },
+                "location": {
+                    "type": "string",
+                    "description": "Where the artifact is placed (e.g., 'pasted on a brick wall', 'glass storefront')."
+                }
+            },
+            "required": [
+                "era",
+                "text_content"
+            ]
+        }
+    },
+    {
+        "name": "apply_physical_grounding_anchors",
+        "description": "Injects physical objects (BS 1363 plugs, Transport font, London Stock Brick) to ensure the scene feels like the UK and not a generic US-biased render.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "setting": {
+                    "type": "string",
+                    "enum": [
+                        "INDOOR",
+                        "STREET",
+                        "INDUSTRIAL"
+                    ]
+                },
+                "include_uk_spelling": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        }
+    }
+]

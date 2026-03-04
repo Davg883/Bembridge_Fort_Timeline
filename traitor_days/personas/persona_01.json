@@ -1,0 +1,9 @@
+{
+    "id": "persona_01",
+    "name": "Dr. Arthur V.",
+    "role_title": "Computing & Radar Pioneer",
+    "faction": "Faithful",
+    "sub_type": "Potential Spy",
+    "background_lore": "A brilliant mind stationed at the Fort during the WWII Electronic Shield era. Instrumental in developing the centimetric 'Pencil Beam' radar and later revolutionized modern computing. Operates primarily near the XDO Room and the AMES Type 41 testing grounds.",
+    "secret_instruction": "Sabotage the Cavity Magnetron spin-up. Introduce a 0.5% calculation error to blind the Culver Battery guns during the critical sensor-fusion integration, without arousing suspicion from the WRNS or the Chief Engineer."
+}
