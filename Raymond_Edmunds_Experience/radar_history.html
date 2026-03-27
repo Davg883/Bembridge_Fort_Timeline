@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Enigma of the Down | Radar Evolution at Bembridge Fort 1940–2026</title>
+    <meta name="description"
+        content="A technically accurate history of the radar evolution at Bembridge Fort, Isle of Wight, from the Analogue Fog of 1940 to the Sovereign Rebirth of 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #c8a55e;
+            --gold-dim: rgba(200, 165, 94, 0.15);
+            --gold-border: rgba(200, 165, 94, 0.3);
+            --bg: #07090d;
+            --bg-panel: #0d1017;
+            --bg-card: #111520;
+            --text: #e2e4e9;
+            --text-dim: #818898;
+            --text-mono: #a8c7a0;
+            --green-crt: #39ff83;
+            --blue-arc: #4fc3f7;
+            --orange-valve: #ff8c42;
+            --act1: #ff8c42;
+            --act2: #4fc3f7;
+            --act3: #39ff83;
+            --act4: #b084ff;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Film grain */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.028;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* ── NAV ─────────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(7,9,13,0.98) 0%, rgba(7,9,13,0.0) 100%);
+            border-bottom: 1px solid var(--gold-border);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-acts {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-acts a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.4rem 0.9rem;
+            border-radius: 2px;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .nav-acts a:hover { color: var(--gold); background: var(--gold-dim); }
+
+        /* ── HERO ────────────────────────────────────────── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 60%,
+                rgba(79, 195, 247, 0.06) 0%,
+                rgba(57, 255, 131, 0.03) 40%,
+                transparent 70%);
+        }
+
+        .hero-stamp {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 em {
+            display: block;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--text-dim);
+            max-width: 680px;
+            margin: 0 auto 3rem;
+        }
+
+        .act-pills {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .act-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid;
+            text-decoration: none;
+            transition: all 0.25s;
+        }
+
+        .pill-1 { color: var(--act1); border-color: var(--act1); }
+        .pill-2 { color: var(--act2); border-color: var(--act2); }
+        .pill-3 { color: var(--act3); border-color: var(--act3); }
+        .pill-4 { color: var(--act4); border-color: var(--act4); }
+
+        .act-pill:hover { opacity: 0.7; transform: translateY(-2px); }
+
+        .scroll-cue {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: bob 2s ease-in-out infinite;
+        }
+
+        .scroll-cue::after {
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(var(--gold), transparent);
+        }
+
+        @keyframes bob {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ── ACT SECTIONS ────────────────────────────────── */
+        .act-section {
+            padding: 7rem 2rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .act-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .act-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1;
+            opacity: 0.08;
+            flex-shrink: 0;
+        }
+
+        .act-meta { flex: 1; }
+
+        .act-tag {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .act-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+
+        .act-period {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Two-col layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .two-col.reverse { direction: rtl; }
+        .two-col.reverse > * { direction: ltr; }
+
+        /* Cinematic image frame */
+        .cine-frame {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .cine-frame img {
+            width: 100%;
+            display: block;
+            filter: contrast(1.05) brightness(0.95);
+            transition: transform 0.6s ease;
+        }
+
+        .cine-frame:hover img { transform: scale(1.02); }
+
+        .cine-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.25rem 1rem 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cine-grain {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.06;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Narrative text */
+        .narrative p {
+            font-size: 1.07rem;
+            line-height: 1.85;
+            color: #c8cad0;
+            margin-bottom: 1.25rem;
+        }
+
+        .narrative .lead {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background: var(--gold-dim);
+            border-radius: 0 4px 4px 0;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+
+        /* Tech spec cards */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .spec-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .spec-card:hover { border-color: var(--gold-border); }
+
+        .spec-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.4rem;
+        }
+
+        .spec-value {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 0.2rem;
+        }
+
+        .spec-note {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        /* Personnel badge */
+        .personnel-badge {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .badge-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .badge-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.15rem;
+        }
+
+        .badge-role {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+        }
+
+        /* Visual DNA tag */
+        .dna-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0.2rem;
+        }
+
+        /* Equipment asset strip */
+        .asset-strip {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .asset-card {
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: var(--bg-panel);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .asset-card:hover {
+            border-color: var(--gold-border);
+            transform: translateY(-3px);
+        }
+
+        .asset-img { width: 100%; display: block; }
+
+        .asset-info {
+            padding: 1rem 1.25rem;
+        }
+
+        .asset-code {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .asset-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .asset-desc {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        /* Divider line */
+        .section-divider {
+            max-width: 1300px;
+            margin: 0 auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+        }
+
+        /* Full-width image break */
+        .full-bleed {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+            filter: contrast(1.08) brightness(0.88) saturate(0.85);
+        }
+
+        .full-bleed-wrap {
+            position: relative;
+            margin: 0;
+        }
+
+        .full-bleed-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(7,9,13,0.7) 0%, transparent 40%, transparent 60%, rgba(7,9,13,0.7) 100%),
+                        linear-gradient(to bottom, rgba(7,9,13,0.4) 0%, transparent 30%, transparent 70%, rgba(7,9,13,0.8) 100%);
+            pointer-events: none;
+        }
+
+        .full-bleed-label {
+            position: absolute;
+            bottom: 2rem;
+            right: 2.5rem;
+            text-align: right;
+        }
+
+        .full-bleed-label .code {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+            opacity: 0.7;
+        }
+
+        .full-bleed-label .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        /* Mono code block (technical spec info) */
+        .mono-block {
+            background: #0a0f16;
+            border: 1px solid rgba(57, 255, 131, 0.15);
+            border-radius: 4px;
+            padding: 1.5rem;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.78rem;
+            line-height: 1.9;
+            color: var(--text-mono);
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .mono-block .comment { color: #4a5568; }
+        .mono-block .key { color: var(--blue-arc); }
+        .mono-block .val { color: var(--orange-valve); }
+
+        /* Timeline connector */
+        .timeline-bar {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            max-width: 1300px;
+            margin: 5rem auto 0;
+            padding: 0 2rem;
+            overflow-x: auto;
+        }
+
+        .tl-node {
+            flex: 1;
+            min-width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .tl-node::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(200,165,94,0.3), transparent);
+        }
+
+        .tl-dot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            background: var(--bg);
+            margin-bottom: 0.75rem;
+        }
+
+        .tl-year {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .tl-label {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            letter-spacing: 0.5px;
+            max-width: 130px;
+            line-height: 1.4;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 0.82rem;
+        }
+
+        footer .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+            .two-col.reverse { direction: ltr; }
+            .asset-strip { grid-template-columns: 1fr; }
+            nav { padding: 0.85rem 1.25rem; }
+            .nav-acts { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">Bembridge Fort Trust</div>
+        <ul class="nav-acts">
+            <li><a href="#act1">Act I · 1940</a></li>
+            <li><a href="#act2">Act II · 1942</a></li>
+            <li><a href="#act3">Act III · 1943</a></li>
+            <li><a href="#act4">Act IV · 2026</a></li>
+            <li><a href="index.html">← Hub</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-bg"></div>
+        <p class="hero-stamp">Bembridge Fort · Isle of Wight · Material Truth: Verified</p>
+        <h1>The Enigma<br>of the Down<em>From Waves to Words</em></h1>
+        <p class="hero-sub">A technically accurate, four-act history of the radar evolution at Bembridge Fort — from the Analogue Fog of 1940 to the Sovereign Rebirth of 2026.</p>
+        <div class="act-pills">
+            <a href="#act1" class="act-pill pill-1">Act I · The Analogue Fog</a>
+            <a href="#act2" class="act-pill pill-2">Act II · The Enigma Moment</a>
+            <a href="#act3" class="act-pill pill-3">Act III · Birth of the One</a>
+            <a href="#act4" class="act-pill pill-4">Act IV · Sovereign Rebirth</a>
+        </div>
+        <div class="scroll-cue">Scroll</div>
+    </section>
+
+    <!-- TIMELINE -->
+    <div class="timeline-bar">
+        <div class="tl-node">
+            <div class="tl-dot" style="color:var(--act1); border-color:var(--act1);">I</div>
+            <div class="tl-year" style="color:var(--act1);">1940–41</div>
+            <div class="tl-label">AMES Type 2 CHL · Admiralty 599 Integrator</div>
+        </div>
+        <div class="tl-node">
+            <div class="tl-dot" style="color:var(--act2); border-color:var(--act2);">II</div>
+            <div class="tl-year" style="color:var(--act2);">1942</div>
+            <div class="tl-label">Cavity Magnetron · AMES Type 41 Centimetric</div>
+        </div>
+        <div class="tl-node">
+            <div class="tl-dot" style="color:var(--act3); border-color:var(--act3);">III</div>
+            <div class="tl-year" style="color:var(--act3);">1943–44</div>
+            <div class="tl-label">MTI · Phantastron Circuit · The First Bit</div>
+        </div>
+        <div class="tl-node">
+            <div class="tl-dot" style="color:var(--act4); border-color:var(--act4);">IV</div>
+            <div class="tl-year" style="color:var(--act4);">2026–33</div>
+            <div class="tl-label">Sovereign Substrate · Digital Rebirth</div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- ACT I -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="act-section" id="act1">
+        <div class="act-header">
+            <div class="act-number" style="color:var(--act1);">I</div>
+            <div class="act-meta">
+                <div class="act-tag" style="color:var(--act1);">Act One · 1940–1941</div>
+                <h2 class="act-title">The Analogue Fog</h2>
+                <div class="act-period">The "Metric Mess" &amp; the struggle to see the enemy</div>
+            </div>
+        </div>
+
+        <div class="two-col reverse">
+            <!-- Narrative -->
+            <div class="narrative">
+                <div class="personnel-badge">
+                    <div class="badge-icon" style="background: rgba(255,140,66,0.15);">⚓</div>
+                    <div>
+                        <div class="badge-name">Geoffrey Kiddle</div>
+                        <div class="badge-role">Royal Navy Clerk · Loop Operations · Casemate 4</div>
+                    </div>
+                </div>
+
+                <p class="lead">The Solent is under siege. It is 1940. On the exposed ramparts of Bembridge Fort, the first radar—the AMES Type 2 Chain Home Low (CHL)—sweeps the Channel with a broad, unfocused "floodlight" of metric energy.</p>
+
+                <p>But the signal is blinded. The white chalk of Culver Cliff, rising immediately to the south-west, creates a deafening roar of <strong>ground clutter</strong>. German E-boats—fast, low, and cold—slip through the gaps in the returns like grey ghosts. The radar operators are navigating an analogue fog.</p>
+
+                <p>The AMES Type 2 array at Bembridge is a massive wooden structure: a 20-foot gantry of rough-hewn <strong>18-inch teakwood timbers</strong>, topped with a 5-bay, 4-stack arrangement of 20 pairs of horizontal half-wave dipoles. Each element is positioned exactly λ/8 in front of a steel wire-netting reflector screen, producing a 20° beam width—wide enough to cover the Channel, but far too coarse to isolate a fast-moving surface target from coastal clutter.</p>
+
+                <div class="pull-quote" style="border-color: var(--act1); color: var(--act1);">
+                    "He is trying to balance the books of the Solent's magnetic field."
+                </div>
+
+                <p>Into this chaos comes <strong>Geoffrey Kiddle</strong>—a man whose civilian life as a Royal Navy Clerk and former bank manager has given him an extraordinary gift: the instinct for precision in disorder. Stationed in the cold, circular tunnel of Casemate 4, Kiddle's instrument is not a radar screen. It is the <strong>Admiralty Pattern 599 Integrator</strong>.</p>
+
+                <p>This wooden-cased, brass-fitted device detects the disturbance of the Earth's magnetic field caused by a submarine's iron hull passing over the classified indicator loops laid on the seabed of Spithead. When a U-boat moves over the loop, the brass needle twitches — what the operators called the <em>"Needle of Truth."</em> Acting alone or alongside the WRNS plotting team, Kiddle translates these infinitesimal deflections into actionable intelligence for the Admiralty.</p>
+
+                <div class="mono-block">
+                    <span class="comment">// ADMIRALTY PATTERN 599 INTEGRATOR — TECHNICAL RECORD</span><br>
+                    <span class="key">substrate</span>: <span class="val">"Mycalex ceramic base (heat-resistant, non-magnetic)"</span><br>
+                    <span class="key">casing</span>: <span class="val">"Polished brass, hand-fitted"</span><br>
+                    <span class="key">mechanism</span>: <span class="val">"Galvanometer needle, electrically damped"</span><br>
+                    <span class="key">function</span>: <span class="val">"Measures HD loop current disturbance from submarine transit"</span><br>
+                    <span class="key">sensitivity</span>: <span class="val">"Sub-milliamp deflection detection"</span><br>
+                    <span class="key">location</span>: <span class="val">"Bembridge Fort, Casemate 4, circular tunnel"</span><br>
+                    <span class="key">operator</span>: <span class="val">"Geoffrey Kiddle, RN Clerk + WRNS plotting team"</span>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <div class="cine-frame">
+                    <img src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\act1_geoffrey_kiddle_integrator_1774650403572.png"
+                        alt="Geoffrey Kiddle at the Admiralty Pattern 599 Integrator in Casemate 4, 1940">
+                    <div class="cine-caption" style="color:var(--act1);">
+                        Geoffrey Kiddle · Casemate 4 · The Needle of Truth · 1940
+                    </div>
+                    <div class="cine-grain"></div>
+                </div>
+
+                <div class="spec-grid" style="margin-top: 1.5rem;">
+                    <div class="spec-card">
+                        <div class="spec-label">Radar Designation</div>
+                        <div class="spec-value">AMES Type 2 (CHL)</div>
+                        <div class="spec-note">Chain Home Low — surface and low-level cover</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Dipole Array</div>
+                        <div class="spec-value">5-bay, 4-stack</div>
+                        <div class="spec-note">20 pairs of end-fed horizontal half-wave dipoles</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Beam Width</div>
+                        <div class="spec-value">20 degrees</div>
+                        <div class="spec-note">Insufficient to isolate surface targets from cliff clutter</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Gantry Material</div>
+                        <div class="spec-value">Teakwood Timber</div>
+                        <div class="spec-note">18-inch square beams; holes hand-bored with augers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asset A -->
+    <div class="full-bleed-wrap">
+        <img class="full-bleed"
+            src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\asset_a_metric_mess_1774650014351.png"
+            alt="AMES Type 2 CHL Mast — the Metric Mess">
+        <div class="full-bleed-overlay"></div>
+        <div class="full-bleed-label">
+            <div class="code" style="color:var(--act1);">Visual DNA: Rough Timber · Salt-Pitted Steel · Dipole Geometry</div>
+            <div class="title">AMES Type 2 · "The Metric Mess" · 1940</div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- ACT II -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="act-section" id="act2">
+        <div class="act-header">
+            <div class="act-number" style="color:var(--act2);">II</div>
+            <div class="act-meta">
+                <div class="act-tag" style="color:var(--act2);">Act Two · 1942</div>
+                <h2 class="act-title">The Enigma Moment</h2>
+                <div class="act-period">The Centimetric Revolution · Unnatural Precision</div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="narrative">
+                <div class="personnel-badge">
+                    <div class="badge-icon" style="background: rgba(79,195,247,0.15);">⚡</div>
+                    <div>
+                        <div class="badge-name">F.C. Williams</div>
+                        <div class="badge-role">TRE Engineer · Cavity Magnetron Installation · 1942</div>
+                    </div>
+                </div>
+
+                <p class="lead">In 1942, a small, elite team from the Telecommunications Research Establishment (TRE) arrives at Bembridge. They carry the most secret hardware on Earth: the <strong>Cavity Magnetron</strong> — a copper-and-brass device that looks, in the words of the engineers, like an "alien heart."</p>
+
+                <p>The Magnetron generates microwave pulses at 10 centimetres — roughly 3 GHz — compared to the 1.5-metre metric waves of the old CHL. This is the <strong>centimetric revolution</strong>. The team replaces the clunky wooden masts with the <strong>AMES Type 41 (CHEL)</strong> — a 10-foot parabolic wire-mesh dish that focuses the energy into a razor-sharp <em>pencil beam</em>.</p>
+
+                <p>Where the old Type 2 "flooded" the Channel with light and hoped something would reflect back, the Type 41 <em>illuminates</em>. It is the difference between a searchlight and a floodlight. The beam width drops from 20° to under 1°. The Fort doesn't just see the Channel; it now reads it like a clockface.</p>
+
+                <div class="pull-quote" style="border-color:var(--act2); color:var(--act2);">
+                    "The blue electrical arc of the centimetric pulse reflects in his glasses. They have achieved Unnatural Precision."
+                </div>
+
+                <p>Leading the installation is <strong>Frederic Calland (F.C.) Williams</strong>, the engineering "Pilot" — a man who refuses to accept noise as an answer. The parabolic dish is bolted directly into the split-flint of the fort's rampart using heavy cold-rolled steel brackets. The signal is fed via rigid hollow copper waveguides — not flexible cables — into the Console Type 5 Plan Position Indicator (PPI) scope housed in the casemate below.</p>
+
+                <p>The Console Type 5 is a revolution in itself: a heavy black metal cabinet housing a 9-inch Cathode Ray Tube (CRT). The P7 slow-persistence phosphor emits a characteristic <strong>yellow-green glow</strong> as the sweep arm rotates, building a living map of the Solent surface. For the first time, a single operator can distinguish a German E-boat from the wake of a Royal Navy frigate — in rain, in fog, in the dead of night.</p>
+
+                <div class="mono-block">
+                    <span class="comment">// AMES TYPE 41 (CHEL) CENTIMETRIC SYSTEM — TECHNICAL RECORD</span><br>
+                    <span class="key">frequency</span>: <span class="val">"3 GHz (10cm wavelength)"</span><br>
+                    <span class="key">source</span>: <span class="val">"Cavity Magnetron — copper resonant cavities, brass body"</span><br>
+                    <span class="key">antenna</span>: <span class="val">"10ft parabolic wire-mesh dish (orange-peel texture)"</span><br>
+                    <span class="key">beam_width</span>: <span class="val">"&lt; 1 degree — 'pencil beam'"</span><br>
+                    <span class="key">display</span>: <span class="val">"Console Type 5 PPI — 9-inch CRT, P7 phosphor"</span><br>
+                    <span class="key">display_colour</span>: <span class="val">"Yellow-green (P7) + orange-red valve filaments"</span><br>
+                    <span class="key">waveguide</span>: <span class="val">"Rigid hollow copper pipe — replaced flexible coax"</span><br>
+                    <span class="key">installation</span>: <span class="val">"Cold-rolled steel brackets into 1867 flint rampart"</span><br>
+                    <span class="key">operator</span>: <span class="val">"F.C. Williams, TRE + WRNS plotting team, Bembridge Fort"</span>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <div class="cine-frame">
+                    <img src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\act2_fc_williams_magnetron_1774650415045.png"
+                        alt="F.C. Williams adjusting the Cavity Magnetron waveguide, 1942">
+                    <div class="cine-caption" style="color:var(--act2);">
+                        F.C. Williams · Cavity Magnetron · AMES Type 41 · 1942
+                    </div>
+                    <div class="cine-grain"></div>
+                </div>
+
+                <div class="spec-grid" style="margin-top:1.5rem;">
+                    <div class="spec-card">
+                        <div class="spec-label">Wavelength</div>
+                        <div class="spec-value">10 cm</div>
+                        <div class="spec-note">vs. 1.5m on the old Type 2 — 15× more precise</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Display</div>
+                        <div class="spec-value">9-inch CRT PPI</div>
+                        <div class="spec-note">Console Type 5; bakelite knurled controls</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Dish Size</div>
+                        <div class="spec-value">10 Feet</div>
+                        <div class="spec-note">Wire-mesh parabola, "orange peel" texture</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">Key Tool</div>
+                        <div class="spec-value">Copper Waveguide</div>
+                        <div class="spec-note">Rigid hollow tubes replaced flexible coax cables</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asset strip -->
+        <div class="asset-strip">
+            <div class="asset-card">
+                <img class="asset-img"
+                    src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\asset_b_pencil_beam_1774650026476.png"
+                    alt="AMES Type 41 parabolic dish — The Pencil Beam">
+                <div class="asset-info">
+                    <div class="asset-code">Asset B · AMES Type 41</div>
+                    <div class="asset-name">The Pencil Beam Dish</div>
+                    <div class="asset-desc">10-foot wire-mesh parabolic reflector bolted into Bembridge's split-flint rampart. The centimetric "Pencil Beam" that replaced the Metric Mess.</div>
+                </div>
+            </div>
+            <div class="asset-card">
+                <img class="asset-img"
+                    src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\asset_c_visual_cortex_1774650038728.png"
+                    alt="Console Type 5 PPI Scope — The Visual Cortex">
+                <div class="asset-info">
+                    <div class="asset-code">Asset C · Console Type 5</div>
+                    <div class="asset-name">The Visual Cortex</div>
+                    <div class="asset-desc">9-inch CRT PPI scope with P7 yellow-green phosphor. The first time the Solent became a readable map of threat.</div>
+                </div>
+            </div>
+            <div class="asset-card">
+                <img class="asset-img"
+                    src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\cavity_magnetron_macro_1774604102245.png"
+                    alt="Cavity Magnetron macro — The Alien Heart">
+                <div class="asset-info">
+                    <div class="asset-code">Asset · Cavity Magnetron</div>
+                    <div class="asset-name">The Centimetric Shield</div>
+                    <div class="asset-desc">AMES Type 41 // The Centimetric Shield. The copper-and-brass "alien heart" pulsing at 3 GHz — the most secret hardware on earth in 1942.</div>
+                </div>
+            </div>
+            <div class="asset-card">
+                <img class="asset-img"
+                    src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\dooley_wrens_teamwork_radar_1774563173503.png"
+                    alt="The WRNS plotting team with Thomas Dooley">
+                <div class="asset-info">
+                    <div class="asset-code">Personnel · WRNS Plotting Team</div>
+                    <div class="asset-name">The Wrens &amp; Tom Dooley</div>
+                    <div class="asset-desc">The mixed team of Royal Navy ratings and WRNS officers operating the classified plotting room — the human intelligence layer of centimetric radar.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="full-bleed-wrap">
+        <img class="full-bleed"
+            src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\dooley_uboat_seabed_1774563019763.png"
+            alt="German U-boat on the seabed of the Channel">
+        <div class="full-bleed-overlay"></div>
+        <div class="full-bleed-label">
+            <div class="code" style="color:var(--act2);">The Target · The English Channel Seabed · 1942</div>
+            <div class="title">The Ghost beneath the Waves</div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- ACT III -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="act-section" id="act3">
+        <div class="act-header">
+            <div class="act-number" style="color:var(--act3);">III</div>
+            <div class="act-meta">
+                <div class="act-tag" style="color:var(--act3);">Act Three · 1943–1944</div>
+                <h2 class="act-title">The Birth of the One</h2>
+                <div class="act-period">Moving Target Indication · The Phantastron Circuit · The First Bit</div>
+            </div>
+        </div>
+
+        <div class="two-col reverse">
+            <div class="narrative">
+                <p class="lead">Inside Casemate 4, the battle against "clutter" leads F.C. Williams to an epiphany that will change the world. To reliably see a moving E-boat, the radar must be able to <em>remember</em> the cliffs.</p>
+
+                <p>This is the concept of <strong>Moving Target Indication (MTI)</strong>. To filter out stationary returns — the chalk, the rocks, the moored hulks — the system must store a "memory" of the previous radar sweep and subtract it from the current one. What remains is only what has <em>moved</em>.</p>
+
+                <p>Williams realises that a charge held on a vacuum tube is, in the deepest sense, <strong>data</strong>. He designs the <strong>Phantastron circuit</strong> — a precise electronic timing gate built from glass valves, cotton-insulated wiring, and a Mycalex base. It is the original logic gate.</p>
+
+                <div class="pull-quote" style="border-color:var(--act3); color:var(--act3);">
+                    "He draws the first '1' of electronic memory on the phosphor. He has moved the world from Waves to Words."
+                </div>
+
+                <p>The electron beam of the CRT, sweeping across the P7 phosphor, is no longer merely displaying radio echoes. It is <em>writing</em>. The glowing "1" etched on that screen inside a Victorian casemate on the Isle of Wight is the conceptual ancestor of every binary digit stored in every computer on Earth.</p>
+
+                <p>The logic of the modern superchip — the stored program, the addressable memory cell — is conceived in the chalk and brick of Culver Down. Williams will carry this insight back to Manchester after the war, where he will build the <strong>Williams Tube</strong>: the world's first operational random-access electronic memory, and the engine that runs the Manchester "Baby," the world's first stored-program computer.</p>
+
+                <div class="mono-block">
+                    <span class="comment">// PHANTASTRON CIRCUIT — THE ORIGINAL LOGIC GATE</span><br>
+                    <span class="key">function</span>: <span class="val">"Moving Target Indication (MTI) timing gate"</span><br>
+                    <span class="key">principle</span>: <span class="val">"Charge on a vacuum tube = stored data ('1' or '0')"</span><br>
+                    <span class="key">display</span>: <span class="val">"Glowing green '1' etched on P7 CRT phosphor"</span><br>
+                    <span class="key">substrate</span>: <span class="val">"Mycalex base · glass valves · cotton-insulated wiring"</span><br>
+                    <span class="key">legacy</span>: <span class="val">"Conceptual ancestor of the Williams Tube (1948) — world's first RAM"</span><br>
+                    <span class="key">chain</span>: <span class="val">"Bembridge 1943 → Manchester Baby 1948 → Modern CPU"</span>
+                </div>
+
+                <!-- Asset D -->
+                <div class="cine-frame" style="margin-top: 2rem;">
+                    <img src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\asset_d_logic_gate_1774650051360.png"
+                        alt="The Williams Assembly — The Logic Gate inside Bembridge Fort casemate">
+                    <div class="cine-caption" style="color:var(--act3);">
+                        Asset D · The Williams Assembly · The Logic Gate · Bembridge 1943
+                    </div>
+                    <div class="cine-grain"></div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <div class="cine-frame">
+                    <img src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\act3_phantastron_glowing_bit_1774650428033.png"
+                        alt="The electron beam etches a glowing green 1 on the CRT phosphor — the first bit">
+                    <div class="cine-caption" style="color:var(--act3);">
+                        The First Bit · P7 Phosphor · Casemate 4 · Bembridge Fort · 1943
+                    </div>
+                    <div class="cine-grain"></div>
+                </div>
+
+                <div class="spec-grid" style="margin-top:1.5rem;">
+                    <div class="spec-card">
+                        <div class="spec-label">Technique</div>
+                        <div class="spec-value">MTI</div>
+                        <div class="spec-note">Moving Target Indication — subtract stored previous sweep</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Tool</div>
+                        <div class="spec-value">Phantastron</div>
+                        <div class="spec-note">Precision timing gate circuit — the original logic gate</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Insight</div>
+                        <div class="spec-value">Charge = Data</div>
+                        <div class="spec-note">A held voltage on a valve is a stored binary digit</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Legacy</div>
+                        <div class="spec-value">Williams Tube</div>
+                        <div class="spec-note">World's first operating RAM · Manchester 1948</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- ACT IV -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section class="act-section" id="act4">
+        <div class="act-header">
+            <div class="act-number" style="color:var(--act4);">IV</div>
+            <div class="act-meta">
+                <div class="act-tag" style="color:var(--act4);">Act Four · 2026–2033</div>
+                <h2 class="act-title">The Sovereign Rebirth</h2>
+                <div class="act-period">Commissioning Node #1 · The Enigma Spirit Returns</div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="narrative">
+                <div class="personnel-badge">
+                    <div class="badge-icon" style="background: rgba(176,132,255,0.15);">🛡️</div>
+                    <div>
+                        <div class="badge-name">The Isabella Campus Apprentice</div>
+                        <div class="badge-role">Seaview Manifestation Desk · Bembridge Fort · 2026</div>
+                    </div>
+                </div>
+
+                <p class="lead">Today, the Sentinel is awake. The logic of Bembridge has come home. A new generation of apprentices sits at the Manifestation Desk inside the restored casemates — not with vacuum tubes and cotton-insulated wire, but with sovereign-grade AI infrastructure.</p>
+
+                <p>The Enigma Spirit of 1942 is no longer a metaphor. It is the <strong>Industrial Operating System of 2033</strong>. Where F.C. Williams used the Phantastron to filter clutter from the Channel, the modern apprentice uses the 1.2ms Reflex of the sovereign substrate to filter historical noise — turning crumbling records, fading photographs, and oral testimonies into an audit-grade registry of truth.</p>
+
+                <p>The chain is unbroken and verifiable: from the twitching Needle of the Admiralty 599 Integrator, to the glowing "1" on the CRT phosphor, to the stored-program computer, to the modern deterministic AI. Every link is inscribed in the brickwork of this fort.</p>
+
+                <div class="pull-quote" style="border-color:var(--act4); color:var(--act4);">
+                    "The 'Forgotten People' — Kiddle, Dooley, the Wrens — are given an Audit-Grade Body. Their voices are un-muffled."
+                </div>
+
+                <p>The "Living Ghost" projection on the fort's parade ground is not theatre. It is evidence. It is the physical demonstration that the 1942 team — Geoffrey Kiddle at his Integrator, Thomas Dooley feeding the garrison and watching the needle, the WRNS officers reading the pencil beam — were not peripheral figures. They were the prototype of every sovereign intelligence system that followed.</p>
+
+                <p>The Bembridge Fort Heritage project exists at the intersection of three missions: the preservation of a <strong>National Lottery Heritage Fund</strong> site, the commissioning of a sovereign intelligence infrastructure, and the telling of stories that have waited 80 years to be heard.</p>
+
+                <div class="mono-block">
+                    <span class="comment">// SOVEREIGN REBIRTH — THE UNBROKEN CHAIN</span><br>
+                    <span class="key">1940</span>: <span class="val">"Admiralty 599 Integrator — first analogue data capture"</span><br>
+                    <span class="key">1942</span>: <span class="val">"Cavity Magnetron — centimetric precision, pencil beam"</span><br>
+                    <span class="key">1943</span>: <span class="val">"Phantastron Circuit — first stored binary bit"</span><br>
+                    <span class="key">1948</span>: <span class="val">"Williams Tube — world's first operating RAM (Manchester)"</span><br>
+                    <span class="key">2026</span>: <span class="val">"Sovereign Substrate — 1.2ms Reflex, Seaview Desk"</span><br>
+                    <span class="key">2033</span>: <span class="val">"Commissioning Node #1 — the Enigma Spirit is the OS"</span>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div>
+                <div class="cine-frame">
+                    <img src="C:\Users\david\.gemini\antigravity\brain\679d78c4-db61-4536-ba0d-5f28a0e76025\act4_living_ghosts_parade_ground_1774650442541.png"
+                        alt="Living Ghost projections on Bembridge Fort parade ground, 2026">
+                    <div class="cine-caption" style="color:var(--act4);">
+                        The Living Ghosts · Bembridge Fort Parade Ground · 2026
+                    </div>
+                    <div class="cine-grain"></div>
+                </div>
+
+                <div class="spec-grid" style="margin-top:1.5rem;">
+                    <div class="spec-card">
+                        <div class="spec-label">The Anchor</div>
+                        <div class="spec-value">Physical Truth</div>
+                        <div class="spec-note">Every tool shown is an invariable physical fact — a Registry of Truth</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Pulse</div>
+                        <div class="spec-value">Centaur Model</div>
+                        <div class="spec-note">Un-muffling the "Forgotten People" — audit-grade digital bodies</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Legacy</div>
+                        <div class="spec-value">Vectis ONE</div>
+                        <div class="spec-note">Direct descendant of the 1942 "First Bit" — 30× infrastructure</div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-label">The Mission</div>
+                        <div class="spec-value">NLHF Showcase</div>
+                        <div class="spec-note">National Lottery Heritage Fund — stories 80 years in the waiting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <footer>
+        <div class="footer-title">The Enigma of the Down</div>
+        <p>A technically accurate record curated by the <strong style="color:var(--gold)">Bembridge Fort Trust</strong> for Tim Wander's lectures and the National Lottery Heritage Fund Showcase.</p>
+        <p style="margin-top:0.75rem; opacity:0.5;">Material Truth: Verified · Identity Stability: Enforced · 1940–2033</p>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.style.opacity = '1';
+                    e.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.two-col > div, .cine-frame, .spec-card, .personnel-badge, .asset-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+            observer.observe(el);
+        });
+
+        // Active nav highlight on scroll
+        const sections = document.querySelectorAll('[id^="act"]');
+        const navLinks = document.querySelectorAll('.nav-acts a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 200) current = s.id;
+            });
+            navLinks.forEach(a => {
+                a.style.color = a.href.includes(current) && current ? 'var(--gold)' : '';
+            });
+        });
+    </script>
+</body>
+
+</html>
