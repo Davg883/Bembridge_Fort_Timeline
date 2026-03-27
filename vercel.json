@@ -1,9 +1,9 @@
 {
-    "redirects": [
-        {
-            "source": "/",
-            "destination": "/Raymond_Edmunds_Experience/storyboard.html",
-            "permanent": true
-        }
-    ]
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Raymond_Edmunds_Experience/index.html",
+      "permanent": false
+    }
+  ]
 }
