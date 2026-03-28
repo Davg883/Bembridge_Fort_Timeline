@@ -4,16 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geoffrey Oliver Kiddle | The Garrison Returns</title>
+    <title>Geoffrey Oliver Kiddle | The Garrison Returns — Bembridge Fort Trust</title>
     <meta name="description"
-        content="A historic record of Geoffrey Oliver Kiddle, his service in the Royal Navy, and his time stationed at Bembridge Fort.">
-    <!-- British typography inspiration via Google Fonts -->
+        content="The story of Geoffrey Oliver Kiddle: bank clerk, Royal Navy operator of the Admiralty Pattern 599 Integrator, and the man who watched for invasion from Bembridge Fort.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── Kiddle page enhancements ───────────────────── */
+        .needle-callout {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            background: rgba(200, 165, 94, 0.06);
+            border: 1px solid rgba(200, 165, 94, 0.25);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 6px 6px 0;
+            padding: 1.25rem 1.5rem;
+            margin: 1.75rem 0;
+        }
+        .needle-callout .icon { font-size: 1.75rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .needle-callout p { margin: 0; font-size: 0.95rem; line-height: 1.7; color: #c8b88a; }
+        .needle-callout strong { color: var(--accent-color); }
+
+        .dual-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .dual-image-grid img {
+            width: 100%;
+            border-radius: 4px;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            filter: grayscale(60%) sepia(20%) contrast(1.1);
+            transition: filter 0.4s;
+        }
+        .dual-image-grid img:hover { filter: grayscale(10%) sepia(5%) contrast(1.05); }
+        .dual-image-grid .span-2 { grid-column: 1 / -1; }
+
+        .service-timeline {
+            border-left: 2px solid rgba(200, 165, 94, 0.3);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .tl-item {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+        .tl-item::before {
+            content: '';
+            position: absolute;
+            left: -1.85rem;
+            top: 0.4rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            box-shadow: 0 0 8px rgba(200, 165, 94, 0.5);
+        }
+        .tl-year {
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            margin-bottom: 0.2rem;
+        }
+        .tl-text {
+            font-size: 0.92rem;
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .dual-image-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,7 +98,8 @@
                 <li><a href="index.html">← Back to Hub</a></li>
                 <li><a href="#intro">Geoffrey Kiddle</a></li>
                 <li><a href="#navy">Royal Navy</a></li>
-                <li><a href="#bembridge">Bembridge Fort</a></li>
+                <li><a href="#loop">The Needle of Truth</a></li>
+                <li><a href="#bembridge">Life at the Fort</a></li>
                 <li><a href="#legacy">Return Home</a></li>
             </ul>
         </div>
@@ -38,121 +108,246 @@
     <!-- Hero Section -->
     <header class="section hero" id="intro">
         <div class="hero-content fade-in">
-            <div class="date-anchor">The Garrison Returns</div>
+            <div class="date-anchor">The Garrison Returns · 1940–1945</div>
             <h1 class="title">GEOFFREY KIDDLE<br><span class="presents">from Hinckley to</span><br>BEMBRIDGE FORT</h1>
-            <p class="subtitle">Anti-Submarine Warfare and the Watch for Invasion</p>
+            <p class="subtitle">Anti-Submarine Warfare · The Needle of Truth · A Watch for Invasion</p>
             <div class="scroll-indicator">
                 <span>Discover his story</span>
                 <div class="arrow"></div>
             </div>
         </div>
-        <div class="hero-poster" style="background-image: url('assets/imagekk.png');"></div>
+        <div class="hero-poster"
+            style="background-image: url('assets/geoffrey_kiddle_1940_1772659634601.png'); background-position: center top; opacity: 0.65;">
+        </div>
         <div class="searchlight"></div>
     </header>
 
     <main>
-        <!-- Early Life -->
+        <!-- ── HINCKLEY ROOTS ─────────────────────────── -->
         <section class="section narrative-section" id="early">
             <div class="container reverse">
                 <div class="text-content slide-in-left">
                     <h2>Hinckley Roots</h2>
                     <p>
-                        Born on 31 October 1909 in Hinckley, Leicestershire, Geoffrey Oliver Kiddle lived and worked in
-                        his hometown, continuing a family tradition. Like his father, grandfather, and great-grandfather
-                        before him, he worked in the local bank as a clerk.
+                        Born on 31 October 1909 in Hinckley, Leicestershire, Geoffrey Oliver Kiddle was a product of an
+                        unbroken line of civic duty. Like his father, grandfather, and great-grandfather before him, he
+                        worked in the local bank as a clerk — a life of quiet, scrupulous precision with numbers and
+                        ledgers.
                     </p>
                     <p>
                         He married Margaret Jennetta Cholerton at St Mary's Church in Hinckley on 15 April 1939. When
-                        the Second World War broke out in September 1939, Geoffrey, remembering his mother's distress at
-                        the losses from the Great War trenches, volunteered for the Royal Navy at the age of thirty to
-                        avoid being called up for the army.
+                        the Second World War broke out in September 1939, Geoffrey — remembering his mother's grief at
+                        the losses from the Great War trenches — volunteered for the Royal Navy at the age of thirty,
+                        choosing the sea over the mud of the front.
                     </p>
+                    <div class="service-timeline">
+                        <div class="tl-item">
+                            <div class="tl-year">1939</div>
+                            <div class="tl-text">Volunteers for the Royal Navy — married Margaret just months before</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-year">1940</div>
+                            <div class="tl-text">Trains at HMS Osprey — Anti-Submarine Warfare School, Portland, Dorset</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-year">1940–42</div>
+                            <div class="tl-text">Posted to Bembridge Fort, Isle of Wight — operates classified HD loop detection systems</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-year">1942–45</div>
+                            <div class="tl-text">Posted to Beirut — continued Anti-Submarine Warfare until VE Day</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-year">1959–74</div>
+                            <div class="tl-text">Manager, Hinckley Permanent Building Society — a return to peacetime precision</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="image-content slide-in-right">
-                    <img src="assets/imagekk.png" alt="Geoffrey Oliver Kiddle">
-                    <p class="caption">Geoffrey Oliver Kiddle, maintaining a proud family legacy</p>
+                    <img src="assets/geoffrey_kiddle_1940_1772659634601.png"
+                        alt="Geoffrey Oliver Kiddle in his Royal Navy uniform, 1940"
+                        style="filter: grayscale(50%) sepia(25%) contrast(1.1);">
+                    <p class="caption">Geoffrey Oliver Kiddle — a bank clerk who chose the sea over the trenches</p>
                 </div>
             </div>
         </section>
 
-        <!-- Navy and anti submarine -->
+        <!-- ── ROYAL NAVY & TRAINING ───────────────────── -->
         <section class="section narrative-section dark-bg" id="navy">
             <div class="container">
                 <div class="text-content slide-in-right">
                     <h2>Anti-Submarine Warfare</h2>
                     <p>
-                        Serving in the Royal Navy from 1940 to 1945, Geoffrey initially trained at HMS Osprey, the
-                        Anti-Submarine Warfare School at the Isle of Portland, Dorset—a direct response to the growing
-                        threat of submarine warfare.
+                        Serving in the Royal Navy from 1940 to 1945, Geoffrey trained at HMS Osprey — the Anti-Submarine
+                        Warfare School at the Isle of Portland, Dorset. His civilian precision as a bank clerk made him
+                        ideally suited to the exacting, analytical demands of submarine detection.
                     </p>
                     <p>
-                        Following his training, he spent time at the HMS Curlew shore base in Northern Ireland before
-                        eventually being posted to the imposing Bembridge Fort. He was given a cottage within Bembridge
-                        village where he lived with his wife and young children, Bob and Jeanetta.
+                        Following training, he served briefly at the HMS Curlew shore base in Northern Ireland before
+                        receiving his posting to Bembridge Fort. He was assigned a cottage within Bembridge village,
+                        where he lived with his wife and young children, Bob and Jeanetta — a rare comfort that kept
+                        the family together on the Island even as conflict raged across the Channel.
                     </p>
+                    <div class="needle-callout">
+                        <div class="icon">⚓</div>
+                        <p>Geoffrey's background in financial ledgers and careful bookkeeping transitioned
+                        seamlessly into the discipline of submarine loop monitoring — both required the same
+                        quality: <strong>absolute attention to the smallest movement in the numbers.</strong></p>
+                    </div>
                 </div>
                 <div class="image-content slide-in-left">
-                    <img src="assets/ChatGPT Image Feb 16, 2026, 03_38_32 PM.png" alt="Royal Navy Anti-Submarine Watch">
-                    <p class="caption">Scanning the waters amidst the threat of invasion</p>
+                    <img src="assets/submarine_loop_1940_1772660732966.png"
+                        alt="Submarine detection loop cable laid on the seabed, 1940"
+                        style="filter: grayscale(40%) sepia(20%) contrast(1.1);">
+                    <p class="caption">The classified underwater HD detection loops laid across Spithead — the first line of warning</p>
                 </div>
             </div>
         </section>
 
-        <!-- Bembridge Fort -->
-        <section class="section narrative-section" id="bembridge">
+        <!-- ── THE NEEDLE OF TRUTH ─────────────────────── -->
+        <section class="section narrative-section" id="loop">
             <div class="container reverse">
                 <div class="text-content slide-in-left">
-                    <h2>Life at The Fort</h2>
+                    <h2>The Needle of Truth</h2>
                     <p>
-                        Geoffrey wrote of his time on the Isle of Wight in great detail. He described the Fort as a
-                        "huge brick-built fort sunk into a deep dry moat on the summit of Bembridge Down." From the
-                        ramparts, he could see the whole length of Spithead, with barrack rooms converted into
-                        dormitories and galleys deep below.
+                        Geoffrey's most critical duty at Bembridge Fort was operating the <strong>Admiralty Pattern 599
+                        Integrator</strong> — a classified instrument housed in one of the fort's cold, circular
+                        brick-vaulted casemates. The device detected the magnetic disturbance of a submarine's iron hull
+                        as it passed over the classified indicator loops laid on the seabed of Spithead.
                     </p>
-                    <div class="quote" style="margin-top:20px;">
-                        <p>“Behind these rooms a tunnel formed a circle of the fort so that each room had two
-                            entrances... At intervals were steep cuttings for the storage of gunpowder. It really was
-                            most impressive.”</p>
+                    <p>
+                        When a U-boat crept beneath the surface into Spithead, the brass needle of the 599 would
+                        flicker. This sub-milliamp movement — invisible to the untrained eye — was the only sign that
+                        the enemy were there. The operators called it, simply, <em>the Needle of Truth</em>.
+                    </p>
+                    <div class="needle-callout">
+                        <div class="icon">🧭</div>
+                        <p>The Admirtalty Pattern 599 Integrator worked on a Mycalex ceramic base with brass
+                        precision fittings. Geoffrey would sit alone in the half-darkness, watching the needle
+                        for the faint twitch that could save Portsmouth Harbour. <strong>The bank clerk had
+                        become the first line of defence for the Solent.</strong></p>
                     </div>
-                    <p style="margin-top: 20px;">
-                        Commanded by a Harley Street dentist "cast in the role of Henry V," the operational reality was
-                        run by CPO Bishop, a highly efficient engineer. Geoffrey fondly noted the absurdly
-                        self-important but likeable bosun, Leading Seaman Pickard, whose foul-mouthed vocabulary
-                        provided much amusement among the 45 Royal Navy personnel stationed there at Christmas 1940.
+                    <p>
+                        He worked alongside a small team of WRNS officers in the plotting room — the Women's Royal
+                        Naval Service providing the same cool, analytical precision under pressure. Together they
+                        translated the silent signals from the seabed into actionable intelligence for the fleet.
                     </p>
                 </div>
                 <div class="image-content slide-in-right">
-                    <img src="assets/ChatGPT Image Feb 16, 2026, 03_44_16 PM.png" alt="Life inside the Fort">
-                    <p class="caption">The formidable brick walls of Bembridge Fort</p>
+                    <div class="dual-image-grid">
+                        <img src="assets/radar_act1_kiddle_integrator.png"
+                            alt="Geoffrey Kiddle at the Admiralty Pattern 599 Integrator in Casemate 4, Bembridge Fort 1940"
+                            class="span-2">
+                        <img src="assets/radar_wrens_teamwork.png"
+                            alt="The WRNS plotting team alongside Thomas Dooley at the radar instruments">
+                        <img src="assets/radar_uboat_seabed.png"
+                            alt="A German U-boat lurking silent on the seabed of the English Channel">
+                    </div>
+                    <p class="caption">Top: Kiddle at the Admiralty 599 in the casemate. Below left: The WRNS plotting team. Below right: The silent threat — a U-boat on the seabed.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Later War and Legacy -->
-        <section class="section narrative-section dark-bg" id="legacy">
+        <!-- ── LIFE AT THE FORT ────────────────────────── -->
+        <section class="section narrative-section dark-bg" id="bembridge">
             <div class="container">
                 <div class="text-content slide-in-right">
-                    <h2>Beirut and a Return to Peace</h2>
+                    <h2>Life at The Fort</h2>
                     <p>
-                        Later in the war, Geoffrey was posted to Beirut, continuing his Anti-Submarine Warfare work
-                        until the conflict came to a close in 1945, watching for an invasion that never came. He
-                        frequently wrote home, admiring the beautiful weather and landscape, yet always longing to
-                        return to his wife and daughter.
+                        Geoffrey wrote of his time on the Isle of Wight in vivid detail. He described Bembridge Fort as
+                        a <em>"huge brick-built fort sunk into a deep dry moat on the summit of Bembridge Down."</em>
+                        From the ramparts, he could see the whole length of Spithead, with barrack rooms converted into
+                        dormitories and galleys deep below.
+                    </p>
+                    <div class="quote" style="margin-top: 1.25rem;">
+                        <p>"Behind these rooms a tunnel formed a circle of the fort so that each room had two
+                            entrances... At intervals were steep cuttings for the storage of gunpowder. It really was
+                            most impressive."</p>
+                    </div>
+                    <p style="margin-top: 1.25rem;">
+                        Commanded by a Harley Street dentist <em>"cast in the role of Henry V,"</em> the operational
+                        reality was run by CPO Bishop, a highly efficient engineer. Geoffrey fondly recalled the
+                        self-important but likeable bosun, Leading Seaman Pickard, whose colourful vocabulary provided
+                        much amusement among the 45 Royal Navy personnel stationed there at Christmas 1940.
                     </p>
                     <p>
-                        Returning to Hinckley, he went on to serve as Manager of the Hinckley Permanent Building Society
-                        from June 1959 until his retirement in October 1974. Following generations of Kiddles, his
-                        financial leadership enriched the community for years. Geoffrey passed away in November 2005,
-                        leaving behind a profound legacy of service—both in peace and in war.
+                        Despite the absurdities of garrison life, Geoffrey's letters home carried an unmistakable warmth.
+                        He admired the Island deeply — both its natural beauty and the camaraderie of the men and women
+                        who served alongside him under the shadow of potential invasion.
                     </p>
                 </div>
                 <div class="image-content slide-in-left">
+                    <div class="dual-image-grid">
+                        <img src="assets/kiddle_christmas_1940_1772660718767.png"
+                            alt="Christmas 1940 at Bembridge Fort — the garrison celebrate under wartime conditions">
+                        <img src="assets/fort_courtyard_prime_1772313951961.png"
+                            alt="Bembridge Fort's Victorian brick courtyard interior">
+                    </div>
+                    <p class="caption">Left: Christmas 1940 — 45 men and women keeping a watchful eye on the Solent. Right: The imposing Victorian brick walls Geoffrey called home.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BEIRUT AND LEGACY ───────────────────────── -->
+        <section class="section narrative-section" id="legacy">
+            <div class="container reverse">
+                <div class="text-content slide-in-left">
+                    <h2>Beirut and a Return to Peace</h2>
+                    <p>
+                        Later in the war, Geoffrey was posted to Beirut, continuing his Anti-Submarine Warfare work
+                        until the conflict came to a close in 1945 — watching for an invasion that never came. His
+                        letters home from the Mediterranean spoke of beautiful weather and a longing for his family
+                        and the quiet streets of Hinckley.
+                    </p>
+                    <p>
+                        Returning to his home town, he went on to serve as Manager of the Hinckley Permanent Building
+                        Society from June 1959 until his retirement in October 1974. As his father and grandfather had
+                        before him, Geoffrey's financial leadership enriched the community for years. He passed away in
+                        November 2005, leaving behind a profound legacy of service — both in peace and in war.
+                    </p>
+                    <div class="needle-callout">
+                        <div class="icon">🏅</div>
+                        <p>Geoffrey wrote everything down. His letters and memoirs are a primary historical record
+                        of life inside Bembridge Fort — the personalities, the routines, the tension and the
+                        dark humour that kept 45 souls going through five years of war. <strong>He was the
+                        fort's chronicler as much as its sentinel.</strong></p>
+                    </div>
+                </div>
+                <div class="image-content slide-in-right">
                     <video autoplay loop muted playsinline
                         style="width: 100%; border-radius: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
                         <source src="assets/HVPM6922.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
+                        <!-- Fallback image if video not available -->
+                        <img src="assets/geoffrey_kiddle_1940_1772659634601.png"
+                            alt="Geoffrey Kiddle's legacy"
+                            style="width:100%; border-radius:4px;">
                     </video>
-                    <p class="caption">Memories of service and the legacy of Geoffrey Kiddle</p>
+                    <p class="caption">Memories of service and the enduring legacy of Geoffrey Oliver Kiddle — bank clerk, sentinel, chronicler.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── LINKED STORY: RADAR ─────────────────────── -->
+        <section class="section narrative-section dark-bg">
+            <div class="container" style="flex-direction: column; align-items: flex-start;">
+                <h2 style="margin-bottom: 1rem;">The Wider Picture</h2>
+                <p style="max-width: 680px; color: #a1a1aa; margin-bottom: 2rem;">
+                    Geoffrey Kiddle's watch at the Admiralty 599 Integrator was one thread in a much larger tapestry.
+                    The radar technology evolving around him at Bembridge Fort was about to change the world.
+                </p>
+                <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                    <a href="radar_history.html"
+                        style="display:inline-block; padding:0.85rem 1.75rem; border:1px solid #4fc3f7; color:#4fc3f7; text-decoration:none; border-radius:4px; font-size:0.85rem; letter-spacing:1px; text-transform:uppercase; transition: background 0.2s;"
+                        onmouseover="this.style.background='rgba(79,195,247,0.1)'"
+                        onmouseout="this.style.background='transparent'">
+                        Explore the Radar Evolution →
+                    </a>
+                    <a href="index.html"
+                        style="display:inline-block; padding:0.85rem 1.75rem; border:1px solid rgba(200,165,94,0.4); color:var(--accent-color, #c8a55e); text-decoration:none; border-radius:4px; font-size:0.85rem; letter-spacing:1px; text-transform:uppercase; transition: background 0.2s;"
+                        onmouseover="this.style.background='rgba(200,165,94,0.08)'"
+                        onmouseout="this.style.background='transparent'">
+                        ← Return to All Stories
+                    </a>
                 </div>
             </div>
         </section>
@@ -160,8 +355,8 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>A historic record of Geoffrey Kiddle and The Garrison Returns. Curated by the Bembridge Fort Trust.</p>
-        <p class="small-text">Past Futures Initiative © 2026. Data grounded in historical WWII archives.</p>
+        <p>The story of Geoffrey Oliver Kiddle — curated by the <strong>Bembridge Fort Trust</strong>.</p>
+        <p class="small-text">Past Futures Initiative © 2026 · Data grounded in historical WWII archives and Geoffrey Kiddle's personal letters.</p>
     </footer>
 
     <script src="script.js"></script>
